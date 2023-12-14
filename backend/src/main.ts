@@ -19,7 +19,7 @@ async function bootstrap() {
 
   Documentation(app);
 
-  await app.listen(port);
+  await app.listen(port, '0.0.0.0');
   logger.log(`listening on port ${port}`);
 }
 
