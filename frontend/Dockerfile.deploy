@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 
 COPY ./frontend/*.json .
 
+RUN npm config set cache /usr/src --global
+RUN npm pkg delete scripts.prepare
 RUN npm ci
 
 COPY ./frontend .
