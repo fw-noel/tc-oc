@@ -6,6 +6,6 @@ const port = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname, "build")));
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log("server started on port" + `${port}`);
 });
